@@ -281,6 +281,11 @@ radial-gradient(110.67% 538.64% at 5.73% 50%,
   display: flex;
   background: $start-screen-gradient-background;
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__content {
     display: flex;
     width: 100%;
@@ -337,10 +342,6 @@ radial-gradient(110.67% 538.64% at 5.73% 50%,
     padding: 8rem 17.5rem 10rem 17.5rem;
     width: 120rem;
     justify-content: space-between;
-  }
-
-  & .wrapper {
-    justify-content: center;
   }
 
   &__image-wrapper {
@@ -460,3 +461,155 @@ radial-gradient(110.67% 538.64% at 5.73% 50%,
   }
 }
 
+.help {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $color-dark-l;
+    text-align: center;
+    @include h3;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__content {
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12rem;
+    row-gap: 5.5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      margin-top: 3rem;
+      color: $color-dark-l;
+      text-align: center;
+      @include h4;
+    }
+  }
+}
+
+.donation {
+  padding-top: 8rem;
+  padding-bottom: 10.3rem;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    margin-left: 3rem;
+    max-width: 38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    color: $color-dark-l;
+    @include h3();
+
+    span {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 2rem;
+    color: $color-dark-l;
+    @include h5();
+  }
+
+  &__payment {
+    @include button_primary();
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    
+    &-text {
+      padding-left: 1.5rem;
+      text-decoration: none;
+      color: $color-dark-l;
+      @include h4();
+    }
+  }
+
+  &__discription {
+    margin-top: 2rem;
+    color: $color-dark-m;
+    @include paragraph-s();
+  }
+}
+
+.footer {
+  padding-top: 4rem;
+  background: $footer-gradient-background;
+
+  &__content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    margin-top: 1.6rem;
+    padding-right: 16.5rem;
+  }
+
+  &__locations,
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-title {
+      color: $color-light-xl;
+      @include h3();
+
+      span {
+        display: block;
+      }
+    }
+
+    &-address,
+    &-phone,
+    &-mail {
+      display: flex;
+      align-items: center;
+      
+      &-place {
+
+        span {
+          display: block;
+        }
+      }
+
+      &-place,
+      &-text {
+        padding-left: 2rem;
+        color: $color-primary;
+        @include h4();
+      }
+    }
+  }
+}
